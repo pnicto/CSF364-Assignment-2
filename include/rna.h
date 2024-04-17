@@ -17,8 +17,9 @@ private:
     bool match(char a, char b) const;
     void numOfPairs(const string &s, int l, int r);
     void computePairs(int l, int r);
+    void genDotBracketResult();
 
-    string sequence;
+    string sequence, dotBracketResult;
     int length;
     bool valid;
     vector<vector<int>> dp, jPairs;

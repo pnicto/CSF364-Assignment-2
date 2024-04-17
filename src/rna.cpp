@@ -12,10 +12,13 @@ RNA::RNA(string s)
         jPairs = vector<vector<int>>(length, vector<int>(length, -1));
         numOfPairs(sequence, 0, length - 1);
         computePairs(0, length - 1);
+        genDotBracketResult();
 
         if (pairs.size() != dp[0][length - 1])
             cout << "Wut" << endl;
     }
+    else
+        cout << "Invalid RNA sequence" << endl;
 }
 
 void RNA::printPairs() const
@@ -23,6 +26,9 @@ void RNA::printPairs() const
     for (auto p : pairs)
         cout << "{" << p.first << " , " << p.second << "} ";
     cout << endl;
+
+    cout << "In dot bracket notation:" << endl;
+    cout << dotBracketResult << endl;
 
     cout << "Total " << dp[0][length - 1] << " pairs" << endl;
 }
@@ -85,4 +91,17 @@ void RNA::computePairs(int l, int r)
     pairs.push_back({jPairs[l][r], r});
     computePairs(l, jPairs[l][r] - 1);
     computePairs(jPairs[l][r] + 1, r - 1);
+}
+
+void RNA::genDotBracketResult()
+{
+    vector<char> v(length, '.');
+
+    for (auto p : pairs)
+    {
+        v[p.first] = '(';
+        v[p.second] = ')';
+    }
+
+    dotBracketResult = string(v.begin(), v.end());
 }
