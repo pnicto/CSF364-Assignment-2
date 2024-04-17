@@ -1,4 +1,4 @@
-#include "rna.h"
+#include "../include/rna.h"
 
 RNA::RNA(string s)
 {
