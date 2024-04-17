@@ -12,6 +12,7 @@ RNA::RNA(string s)
         jPairs = vector<vector<int>>(length, vector<int>(length, -1));
         numOfPairs(sequence, 0, length - 1);
         computePairs(0, length - 1);
+        sort(pairs.begin(), pairs.end());
         genDotBracketResult();
 
         if (pairs.size() != dp[0][length - 1])

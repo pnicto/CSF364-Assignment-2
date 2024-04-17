@@ -1,6 +1,7 @@
 #ifndef RNA_H
 #define RNA_H
 
+#include <algorithm>
 #include <iostream>
 #include <vector>
 
