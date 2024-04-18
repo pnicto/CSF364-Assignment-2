@@ -8,6 +8,8 @@
 
 #include <algorithm>
 #include <iostream>
+#include <fstream>
+#include <stack>
 #include <vector>
 
 using namespace std;
@@ -24,7 +26,7 @@ public:
      *
      * @param s The input RNA sequence.
      */
-    explicit RNA(string s);
+    explicit RNA(string s, string d = "");
     /**
      * @brief Prints pairings in the secondary structure.
      *
@@ -68,6 +70,11 @@ private:
      *
      */
     void genDotBracketResult();
+    /**
+     * @brief Compares the algorithmic result with the actual result/secondary structure.
+     *
+     */
+    void compare() const;
 
     /**
      * @brief Holds the input RNA sequence.
@@ -75,7 +82,12 @@ private:
      */
     string sequence;
     /**
-     * @brief Holds the dot bracket representation of pairs.
+     * @brief Holds the dot bracket representation of the given/real RNA structure.
+     *
+     */
+    string dotBracketInput;
+    /**
+     * @brief Holds the dot bracket representation of pairs computed by the algorithm.
      *
      */
     string dotBracketResult;

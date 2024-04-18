@@ -1,8 +1,9 @@
 #include "../include/rna.h"
 
-RNA::RNA(string s)
+RNA::RNA(string s, string d)
 {
     sequence = s;
+    dotBracketInput = d;
     length = s.length();
     valid = validate();
 
@@ -12,11 +13,11 @@ RNA::RNA(string s)
         jPairs = vector<vector<int>>(length, vector<int>(length, -1));
         numOfPairs(sequence, 0, length - 1);
         computePairs(0, length - 1);
-        sort(pairs.begin(), pairs.end());
-        genDotBracketResult();
-
         if (pairs.size() != dp[0][length - 1])
             cout << "Wut" << endl;
+
+        sort(pairs.begin(), pairs.end());
+        genDotBracketResult();
     }
     else
         cout << "Invalid RNA sequence" << endl;
@@ -28,10 +29,27 @@ void RNA::printPairs() const
         cout << "{" << p.first << " , " << p.second << "} ";
     cout << endl;
 
+    ofstream outfile("out.txt");
+    if (outfile.is_open())
+    {
+        for (auto p : pairs)
+            outfile << "{" << p.first << " , " << p.second << "} ";
+        outfile.close();
+    }
+
     cout << "In dot bracket notation:" << endl;
     cout << dotBracketResult << endl;
 
+    ofstream d_outfile("d_out.txt");
+    if (d_outfile.is_open())
+    {
+        d_outfile << dotBracketResult;
+        d_outfile.close();
+    }
+
     cout << "Total " << dp[0][length - 1] << " pairs" << endl;
+
+    compare();
 }
 
 bool RNA::validate()
@@ -105,4 +123,47 @@ void RNA::genDotBracketResult()
     }
 
     dotBracketResult = string(v.begin(), v.end());
+}
+
+void RNA::compare() const
+{
+    if (dotBracketInput == "")
+        return;
+
+    int match = 0, num = 0;
+    stack<int> algo, res;
+
+    for (int i = 0; i < length; i++)
+    {
+        if (dotBracketInput[i] == '.' && dotBracketResult[i] == '.')
+            match++;
+
+        if (dotBracketInput[i] == '(')
+            res.push(i);
+        if (dotBracketResult[i] == '(')
+            algo.push(i);
+
+        if (dotBracketInput[i] == ')' && dotBracketResult[i] == ')')
+        {
+            if (algo.top() == res.top())
+            {
+                match += 2;
+                num++;
+            }
+            algo.pop();
+            res.pop();
+        }
+        else if (dotBracketInput[i] == ')')
+        {
+            res.pop();
+            num++;
+        }
+        else if (dotBracketResult[i] == ')')
+            algo.pop();
+    }
+
+    float percentage = 100 * (static_cast<float>(match) / length);
+
+    cout << "There are " << num << " pairs in the actual result" << endl;
+    cout << "There is a " << percentage << "% match between the two results" << endl;
 }
