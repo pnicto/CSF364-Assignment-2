@@ -25,6 +25,8 @@ RNA::RNA(string s, string d)
 
 void RNA::printPairs() const
 {
+    if (!valid)
+        return;
     for (auto p : pairs)
         cout << "{" << p.first << " , " << p.second << "} ";
     cout << endl;
@@ -127,7 +129,7 @@ void RNA::genDotBracketResult()
 
 void RNA::compare() const
 {
-    if (dotBracketInput == "")
+    if (dotBracketInput.length() != length)
         return;
 
     int match = 0, num = 0;
