@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-The algorithm implemented as part of this assignment and also discussed in the class is from the book **Algorithm Design by Eva Tardos and Jon Kleinberg**. The algorithm is used to compute the number of possible RNA pairs for a given RNA sequence. The algorithm is based on the concept of dynamic programming and uses a recursive approach to solve the problem. The base pairing follows the fundamental rules in biology i.e., **A** pairs with **U** and **G** pairs with **C**.
+The algorithm implemented as part of this assignment and also discussed in the class is from the book **Algorithm Design by Eva Tardos and Jon Kleinberg** and is given by **Ruth Nussinov**. The algorithm is used to compute the number of possible RNA pairs for a given RNA sequence. The algorithm is based on the concept of dynamic programming and uses a recursive approach to solve the problem. The base pairing follows the fundamental rules in biology i.e., **A** pairs with **U** and **G** pairs with **C**.
 
 For a given RNA sequence, we say that a secondary structure is a list of pairs that satisfies the following conditions:
 
