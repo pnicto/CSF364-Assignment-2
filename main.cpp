@@ -1,3 +1,8 @@
+/**
+ * @file main.cpp
+ * @brief Contains the entry point for the code to run the RNA class.
+ *
+ */
 #include "include/rna.h"
 
 int main()

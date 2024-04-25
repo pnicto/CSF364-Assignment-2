@@ -1,3 +1,8 @@
+/**
+ * @file rna.cpp
+ * @brief Contains the implementation for the RNA class.
+ *
+ */
 #include "../include/rna.h"
 
 RNA::RNA(string s, string d)
