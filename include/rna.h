@@ -7,8 +7,8 @@
 #define RNA_H
 
 #include <algorithm>
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <stack>
 #include <vector>
 
@@ -20,7 +20,7 @@ using namespace std;
  */
 class RNA
 {
-public:
+  public:
     /**
      * @brief Construct a new RNA object.
      *
@@ -33,7 +33,7 @@ public:
      */
     void printPairs() const;
 
-private:
+  private:
     /**
      * @brief Checks if the RNA sequence is valid i.e. made up of A,U,G or C nucleotides.
      *
