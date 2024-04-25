@@ -24,3 +24,17 @@ Here \f$OPT(i,j-1)\f$ indicates the case where \f$j\f$ is not a member of any pa
 The time complexity for this problem can be calculated as follows:
 
 The number of sub-problems is \f$O(n^2)\f$ and evaluating the recurrence each of these problems takes \f$O(n)\f$ time. Hence, the total time complexity is \f$O(n^3)\f$.
+
+## Other Algorithms
+
+There are other dynamic programming solutions for this problem and they are more involved than the one discussed here. The algorithm implemented as part of this assignment does not focus on the energies of the pairs and hence is simpler. The other algorithms focus on the energies of the pairs. We list some of the algorithms here
+
+-   McCaskill's Algorithm
+-   Maximum Expected Accuracy (MEA) Algorithm
+
+## References
+
+-   Kleinberg, J., & Tardos, E. (2022). Algorithm Design (2nd ed.). Pearson.
+-   Raden, M., Mohamed, M. M., Ali, S. M., & Backofen, R. (2018). Interactive implementations of thermodynamics-based RNA structure and RNA-RNA interaction prediction approaches for example-driven teaching. PLOS Comput. Biol, 14(8), e1006341. doi:10.1371/journal.pcbi.1006341
+-   Raden, M., Ali, S. M., Alkhnbashi, O. S., Busch, A., Costa, F., Davis, J. A., … Backofen, R. (2018). Freiburg RNA tools: a central online resource for RNA-focused research and teaching. Nucleic Acids Research, 46(W1), W25–W29. doi:10.1093/nar/gky329
+-   Nussinov, R., Pieczenik, G., Griggs, J. R., & Kleitman, D. J. (1978). Algorithms for Loop Matchings. SIAM Journal on Applied Mathematics, 35(1), 68–82. doi:10.1137/0135006
