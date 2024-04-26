@@ -8,7 +8,7 @@ f="rnaProfile"
 g++ -pg -O3 "$f".cpp -o "$f".out
 echo -n > "$f".txt
 
-for i in $(seq 100 100 5000) ; do
+for i in $(seq 100 100 2500) ; do
     echo -n "$i " >> "$f".txt
     for j in $(seq 1 1 10) ; do
         python3 genSequence.py "$i"
