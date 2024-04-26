@@ -1,5 +1,4 @@
 # Example Analysis
 
-```bash
-echo "Hello world"
-```
+![graph](images/graph.png)
+Table
