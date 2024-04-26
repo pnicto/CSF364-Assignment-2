@@ -16,7 +16,7 @@ RNA::RNA(string s, string d)
     {
         dp = vector<vector<int>>(length, vector<int>(length, -1));
         jPairs = vector<vector<int>>(length, vector<int>(length, -1));
-        numOfPairs(sequence, 0, length - 1);
+        numOfPairs(sequence);
         computePairs(0, length - 1);
         if (pairs.size() != dp[0][length - 1])
             cout << "Wut" << endl;
@@ -74,7 +74,7 @@ bool RNA::match(char a, char b) const
     return false;
 }
 
-void RNA::numOfPairs(const string &s, int l, int r)
+void RNA::numOfPairs(const string &s)
 {
     for (int i = 0; i < length; i++)
     {

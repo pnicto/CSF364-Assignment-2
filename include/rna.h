@@ -57,12 +57,10 @@ class RNA
      * @param l The left index.
      * @param r The right index.
      */
-    void numOfPairs(const string &s, int l, int r);
+    void numOfPairs(const string &s);
     /**
      * @brief Computes pairs in the RNA sequence.
      *
-     * @param l The left index.
-     * @param r The right index.
      */
     void computePairs(int l, int r);
     /**
