@@ -59,5 +59,5 @@ for i in $(seq 5 5 55) ; do
 done
 
 for f in "${files[@]}"; do
-    python3 averagetimes.py "$f" > results/"$f".txt
+    python3 averagetimes.py "$f".txt > results/"$f".txt
 done
