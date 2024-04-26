@@ -1,0 +1,11 @@
+The average time for 5 points is 0.0 seconds.
+The average time for 10 points is 0.0 seconds.
+The average time for 15 points is 0.0 seconds.
+The average time for 20 points is 0.0 seconds.
+The average time for 25 points is 0.0 seconds.
+The average time for 30 points is 0.0 seconds.
+The average time for 35 points is 0.002 seconds.
+The average time for 40 points is 0.031 seconds.
+The average time for 45 points is 0.394 seconds.
+The average time for 50 points is 2.682 seconds.
+The average time for 55 points is 26.785 seconds.

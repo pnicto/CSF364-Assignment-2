@@ -1,0 +1,12 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+100.00      0.76     0.76        1   760.00   760.00  ProfileRNA::numOfPairs(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int)
+  0.00      0.76     0.00       10     0.00     0.00  void std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::_M_realloc_insert<std::pair<int, int> >(__gnu_cxx::__normal_iterator<std::pair<int, int>*, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >, std::pair<int, int>&&)
+  0.00      0.76     0.00        2     0.00     0.00  frame_dummy
+  0.00      0.76     0.00        1     0.00     0.00  ProfileRNA::computePairs(int, int)
+  0.00      0.76     0.00        1     0.00   760.00  ProfileRNA::ProfileRNA(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+  0.00      0.76     0.00        1     0.00     0.00  ProfileRNA::~ProfileRNA()
+  0.00      0.76     0.00        1     0.00     0.00  ProfileRNA::printPairs() const
