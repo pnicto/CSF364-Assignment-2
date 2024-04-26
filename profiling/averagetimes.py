@@ -1,4 +1,5 @@
-f = open('rnaProfile.txt', 'r')
+import sys
+f = open(sys.argv[1], 'r')
 for line in f:
     times = line.split(' ')
     sum = 0

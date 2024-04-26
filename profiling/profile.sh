@@ -58,4 +58,7 @@ for i in $(seq 5 5 55) ; do
     echo "" >> "$f".txt
 done
 
-python3 averagetimes.py > results.txt
+#python3 averagetimes.py > results.txt
+for f in "${files[@]}"; do
+    python3 averagetimes.py "$f" > results/"$f".txt
+done
