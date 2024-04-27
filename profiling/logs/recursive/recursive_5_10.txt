@@ -1,0 +1,12 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.00     0.00        1     0.00     0.00  ProfileRNA::computePairs(int, int)
+  0.00      0.00     0.00        1     0.00     0.00  ProfileRNA::numOfPairsRecursive(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int, int)
+  0.00      0.00     0.00        1     0.00     0.00  ProfileRNA::ProfileRNA(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+  0.00      0.00     0.00        1     0.00     0.00  ProfileRNA::~ProfileRNA()
+  0.00      0.00     0.00        1     0.00     0.00  ProfileRNA::printPairs() const
