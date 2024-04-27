@@ -9,8 +9,8 @@ Our three implementations are as follows:
 
 ## Performance Comparison
 
-![graph](images/graph.png)
 
+Below is a table of the average runtimes in seconds of the algorithms for a given input size.
 | Number of nucleotides | Top Down | Bottom Up | Recursive |
 | --------------------- | -------- | --------- | --------- |
 | 5                     | 0        | 0         | 0         |
@@ -49,6 +49,9 @@ Our three implementations are as follows:
 | 2300                  | 7.69     | 11.47     |           |
 | 2400                  | 8.415    | 13.207    |           |
 | 2500                  | 9.673    | 15.18     |           |
+
+The above table represented as a graph:
+![graph](images/graph.png)
 
 ## Top Down vs Bottom Up
 
