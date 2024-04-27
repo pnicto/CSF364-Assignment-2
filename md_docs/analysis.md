@@ -1,7 +1,9 @@
 # Analysis
 
+## Performance Comparison
+
 ![graph](images/graph.png)
-  
+
 
 |Number of nucleotides |	Top Down |	Bottom Up	 |Recursive|
 |----------------------|-------------|---------------|---------|
@@ -41,3 +43,19 @@
 |2300| 	7.69	|11.47|	|
 |2400| 	8.415	|13.207	| |
 |2500| 	9.673	|15.18	| |
+
+## Top Down vs Bottom Up
+
+As seen above, the top down version of the algorithm performs better than the bottom up one. This can be attributed to the fact that the bottom up approach is computing all possible dp states before it reaches the desired state, however this is not the case for the top down approach. The top down code computes only the necessary states required in the recursion and thus saves a considerable amount of time when the input is large.
+
+To further elucidate, we present the entries of `RNA::dp` array after the pairs calculation is done.
+
+**Note**: `-1` is the value `RNA::dp` is initialized with, so a cell with `-1` represents an un-computed state.
+
+### Top Down
+
+![top](images/top.png)
+
+### Bottom Up
+
+![bottom](images/bottom.png)
