@@ -1,5 +1,12 @@
 # Analysis
 
+## Introduction
+We have implemented the algorithm discussed in class and have analysed its performance as well as the performance of two more variations that we have implemented. We compared these implementations by profiling them with the help of gprof, and profiled them using randomly generated RNA sequences.
+Our three implementations are as follows:
+1. A bottom-up dynamic programming approach (as discussed in class)
+2. A top-down dynamic programming approach
+3. A recursive approach without any dynamic programming
+
 ## Performance Comparison
 
 ![graph](images/graph.png)
