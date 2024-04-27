@@ -1,7 +1,7 @@
-# Example Analysis
+# Analysis
 
 ![graph](images/graph.png)
-Table
+  
 
 |Number of nucleotides |	Top Down |	Bottom Up	 |Recursive|
 |----------------------|-------------|---------------|---------|
