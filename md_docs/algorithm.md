@@ -32,6 +32,25 @@ There are other dynamic programming solutions for this problem and they are more
 -   McCaskill's Algorithm
 -   Maximum Expected Accuracy (MEA) Algorithm
 
+## Example Output
+
+```plaintext
+The pairs are:
+{0 , 53} {1 , 8} {2 , 7} {9 , 52} {10 , 50} {11 , 49} {12 , 46} {13 , 45} {14 , 43} {17 , 41} {18 , 40} {19 , 39} {20 , 37} {21 , 36} {22 , 35} {23 , 28} {29 , 34}
+
+
+In dot bracket notation:
+(((....))((((((..(((((((....)(....)))).))).).))..)).))..
+Total 17 pairs in the calculated RNA secondary structure
+There are 13 pairs in the RNACentral result
+There is a 50% match between the two results
+```
+
+<img
+    src="example1.png"
+    style="width: 100%;"
+    />
+
 ## References
 
 -   Kleinberg, J., & Tardos, E. (2022). Algorithm Design (2nd ed.). Pearson.
