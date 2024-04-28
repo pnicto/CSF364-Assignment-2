@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+if [[ $1 == "docs" ]]; then
+	(
+		find src include md_docs -type f
+		find . -type f -name 'main.cpp'
+	) | entr -rc doxygen
+fi
+
+g++ -Iinclude src/*.cpp main.cpp
