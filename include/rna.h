@@ -25,6 +25,7 @@ class RNA
      * @brief Construct a new RNA object.
      *
      * @param s The input RNA sequence.
+     * @param d The dot bracket representation of the RNA sequence.
      */
     explicit RNA(string s, string d = "");
     /**
@@ -54,12 +55,12 @@ class RNA
      * @brief Calculates maximum number of pairs in the RNA sequence.
      *
      * @param s The RNA sequence.
-     * @param l The left index.
-     * @param r The right index.
      */
     void numOfPairs(const string &s);
     /**
      * @brief Computes pairs in the RNA sequence.
+     * @param l The left index.
+     * @param r The right index.
      *
      */
     void computePairs(int l, int r);

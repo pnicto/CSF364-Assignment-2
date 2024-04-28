@@ -5,6 +5,11 @@
  */
 #include "include/rna.h"
 
+/**
+ * @brief The entry point for the code.
+ *
+ * @return int The exit status.
+ */
 int main()
 {
     string s, d_s;
