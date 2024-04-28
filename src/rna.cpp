@@ -19,7 +19,7 @@ RNA::RNA(string s, string d)
         numOfPairs(sequence);
         computePairs(0, length - 1);
         if (pairs.size() != dp[0][length - 1])
-            cout << "Wut" << endl;
+            cout << "Invalid State" << endl;
 
         sort(pairs.begin(), pairs.end());
         genDotBracketResult();
@@ -30,6 +30,7 @@ RNA::RNA(string s, string d)
 
 void RNA::printPairs() const
 {
+    cout << "The pairs are:" << endl;
     if (!valid)
         return;
     for (auto p : pairs)
@@ -44,7 +45,7 @@ void RNA::printPairs() const
         outfile.close();
     }
 
-    cout << "In dot bracket notation:" << endl;
+    cout << "\n\nIn dot bracket notation:" << endl;
     cout << dotBracketResult << endl;
 
     ofstream d_outfile("d_out.txt");
@@ -54,7 +55,7 @@ void RNA::printPairs() const
         d_outfile.close();
     }
 
-    cout << "Total " << dp[0][length - 1] << " pairs" << endl;
+    cout << "Total " << dp[0][length - 1] << " pairs in the calculated RNA secondary structure" << endl;
 
     compare();
 }
@@ -171,6 +172,6 @@ void RNA::compare() const
 
     float percentage = 100 * (static_cast<float>(match) / length);
 
-    cout << "There are " << num << " pairs in the actual result" << endl;
+    cout << "There are " << num << " pairs in the RNACentral result" << endl;
     cout << "There is a " << percentage << "% match between the two results" << endl;
 }
