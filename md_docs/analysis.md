@@ -51,6 +51,7 @@ Below is a table of the average runtimes in seconds of the algorithms for a give
 | 2500                  | 9.673    | 15.18     |           |
 
 The above table represented as a graph:
+
 ![graph](images/graph.png)
 
 ## Top Down vs Bottom Up
