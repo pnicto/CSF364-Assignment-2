@@ -1,20 +1,18 @@
-import sys
 import os
 import subprocess
 import traceback
 import re
 import networkx as nx
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
 from matplotlib.lines import Line2D
 from pathlib import Path
 
 CMD = ["./a.out"]
 
 
-def getRNASequence(path):
+def getRNASequence():
     try:
-        with open(path, "r") as f:
+        with open("../in.txt", "r") as f:
             sequence = f.read()
     except Exception:
         traceback.print_exc()
@@ -206,7 +204,7 @@ def plotData(sequence, matches):
 
 def main():
     wd = os.getcwd()
-    subprocess.run(CMD + [sys.argv[1]], cwd=Path(wd).parents[0])
+    subprocess.run(CMD, cwd=Path(wd).parents[0])
 
     try:
         with open("../out.txt", "r") as f:
@@ -215,7 +213,7 @@ def main():
         traceback.print_exc()
 
     print("Plotting the 2D structure...")
-    plotData(getRNASequence(sys.argv[1]), getRNAPairs(output))
+    plotData(getRNASequence(), getRNAPairs(output))
 
 
 if __name__ == "__main__":

@@ -24,16 +24,14 @@
       g++ -Iinclude src/*.cpp main.cpp
     ```
 
--   The binary accepts a file as command line argument containing the RNA sequence.
+-   Add the RNA sequence to `in.txt` .
+
+-   Execute the binary using the following command.
     ```bash
-      ./a.out <input_file>
-      # Example
-      ./a.out in.txt
+      ./a.out
     ```
 -   Running the visualization script requires one to already have installed the dependencies. The script can be run as follows:
     ```bash
       cd scripts
-      python visualize.py <input_file>
-      # Example
-      python visualize.py ../in.txt
+      python visualize.py
     ```
