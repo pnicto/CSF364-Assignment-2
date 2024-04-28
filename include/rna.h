@@ -15,7 +15,7 @@
 using namespace std;
 
 /**
- * @brief A class that represents a RNA sequence.
+ * @brief A class that represents an RNA sequence.
  *
  */
 class RNA

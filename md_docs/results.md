@@ -23,7 +23,7 @@ Percentage Match is calculated as the ratio of the number of base pairs in the R
 
 ## Observations
 
-As it is very clear from the above table that the number of base pairs calculated by our algorithm is very off to the actual value. This can be easily explained with the fact that RNA base pairing in living organisms is a very complex process and is not just limited to the Watson-Crick base pairing. There are many other factors that come into play like the tertiary structure of the RNA, stability of the RNA (minimum free energy), mutations, the presence of non-canonical base pairs, etc. which are not considered in our algorithm. This is the reason why the percentage match is very low for all the RNA sequences.
+As it is very clear from the above table that the number of base pairs calculated by our algorithm is very off the actual value. This may be explained with the fact that RNA base pairing in living organisms is a very complex process and is not just limited to the Watson-Crick base pairing. There are many other factors that come into play like the tertiary structure of the RNA, stability of the RNA (minimum free energy), mutations, the presence of non-canonical base pairs, etc. which are not considered in our algorithm. This is the reason why the percentage match is very low for all the RNA sequences.
 
 ## Samples
 
